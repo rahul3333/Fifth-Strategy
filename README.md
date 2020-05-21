@@ -23,6 +23,11 @@ multer
 nodemailer  
 rotating-file-stream  
 
+# Steps to run
+1. Install Requirements.txt  
+2. Install dependencies mentioned in package.json  
+3. To run the server use command : nodemon index
+
 # Screenshots
 
 ![HomePage](images/homepage.PNG)
