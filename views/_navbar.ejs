@@ -1,0 +1,57 @@
+<nav class="navbar navbar-expand-lg navbar-dark" style="background-color:#24292E;">
+    <a class="navbar-brand" href="/">Fifth Strategy</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+<div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="/">About-us </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/">Why-us</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Explore
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="#">How We Work</a>
+            <a class="dropdown-item" href="#">Contribute</a>
+            <a class="dropdown-item" href="#">Suggestions</a>
+            <a class="dropdown-item" href="#">Help</a>
+          </div>
+        </li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li class="nav-item mr-3 mb-1"><a href="/users/signup"><button class="btn btn-outline-light" data-toggle="button" aria-pressed="false" type="button"> Sign Up</button></a></li>
+        <li class="nav-item mr-1"><a href="/users/signin"><button class="btn btn-outline-light" data-toggle="button" aria-pressed="false" type="button"> Sign In</button></a></li>
+      </ul>
+</div>
+</nav>
+
+<!-- <% if(flash.success && flash.success.length>0){%>
+  <h5>
+    <%=flash.success%>
+  </h5>
+<%}%> -->
+<script>
+  <%if(flash.success && flash.success.length>0){%>
+      new Noty({
+        theme:'relax',
+        text:"<%= flash.success%>",
+        type:'success',
+        layout:'topRight',
+        timeout:1500
+      }).show()
+  <%}%>
+  <%if(flash.error && flash.error.length>0){%>
+      new Noty({
+        theme:'relax',
+        text:"<%= flash.error%>",
+        type:'error',
+        layout:'topRight',
+        timeout:1500
+      }).show()
+  <%}%>
+</script>

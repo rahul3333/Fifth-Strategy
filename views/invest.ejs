@@ -1,0 +1,37 @@
+<html>
+    <head>
+        <title>
+            <%= title %>
+        </title>
+        <meta name="viewport" content="width=device-width, initial-scale=1" charset="utf-8">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+        <link rel="stylesheet" href="<%= assetPath('/css/home.css')%>">
+        <link rel="stylesheet" href="<%= assetPath('/css/invest.css')%>">
+        <link rel="stylesheet" href="<%= assetPath('/css/profile.css')%>">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/noty/3.1.4/noty.min.js"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/noty/3.1.4/noty.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    </head>
+    <body onload="numofdays() ,nameofcompany()">
+        <%- include('_navbar2')%>
+        <form action="/invest/create" method="POST" id="new-investment">
+        <div id="slider">
+        <div class="company slide active">
+                <p class="para_company">Invest In <select id="organization" name="company_name" required></select></p>
+                <input type="button" value="Next" id="next_button" class="company_button">
+        </div>
+        <div class="invest_container slide" id="invest_div">
+                <p class="para_amount">Amount <input type="text" name="invest" class="form_amount" placeholder="Amount in Rupees" required></p>
+                <p class="para_days">Number of Days <select name="no_of_days" id="list_days" required></select></p>
+                <input type="button" value="Back" id="back_button" class="company_button2">
+                <input type="submit" value="Invest" class="invest_button">
+        </div>
+        </div>
+    </form>
+        <script src="<%= assetPath('/js/numberofdays.js')%>"></script>
+        <script src="<%= assetPath('/js/sliderfunc.js')%>"></script>
+        <script src="<%= assetPath('/js/nameofcompany.js')%>"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    </body>

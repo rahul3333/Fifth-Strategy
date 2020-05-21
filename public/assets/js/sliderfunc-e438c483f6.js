@@ -1,0 +1,1 @@
+$("#next_button").click((function(){var e=$(".slide.active"),a=e.next();$(".invest_container")[0].style.display="block",e.fadeOut(200).removeClass("active"),a.fadeIn(50).addClass("active")})),$("#back_button").click((function(){var e=$(".slide.active"),a=e.prev();e.fadeOut(300).removeClass("active"),a.fadeIn(300).addClass("active")}));

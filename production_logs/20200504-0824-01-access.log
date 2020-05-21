@@ -1,0 +1,5 @@
+[0mGET /users/output [36m302[0m 8.539 ms - 70[0m
+[0mGET /users/signin [36m304[0m 11.745 ms - -[0m
+[0mGET /css/signin.css [36m304[0m 1.843 ms - -[0m
+[0mGET /css/home.css [36m304[0m 1.185 ms - -[0m
+[0mGET /js/frames.js [36m304[0m 1.676 ms - -[0m

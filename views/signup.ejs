@@ -1,0 +1,45 @@
+<html>
+    <head>
+        <title>
+            <%= title%>
+        </title>
+        <meta name="viewport" content="width=device-width, initial-scale=1" charset="utf-8">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+        <link rel="stylesheet" href="<%= assetPath('/css/home.css')%>">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/noty/3.1.4/noty.min.js"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/noty/3.1.4/noty.min.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    </head>
+    <body>
+        <%- include('_navbar')%>
+        <div id="outer_div">
+        <div id="user_signup_details" class="signup_details">
+            <h2 style="color: white; margin-bottom: 3rem;" >Sign Up</h2>
+            <form action="/users/create_entry" method="POST">
+                <input type="text" name="name" id="signup_name" placeholder="Name" class="text_back" required>
+                <input type="email" name="email" id="signup_email" placeholder="Email" class="text_back1" required>
+                <input type="password" name="password" id="signup_password" placeholder="Password" class="text_back" required>
+                <input type="password" name="confirm_password" id="signup_conf_pass" placeholder="Confirm Password" class="text_back" required>
+                <input type="number" name="phone" id="signup_phone" placeholder="Phone Number" class="text_back" required>
+                <button id="verify" class="btn btn-primary">Verify Phone Number</button>
+                <input type="submit" value="Sign Up" class="btn btn-danger pl-5 pr-5 ml-3">
+            </form>
+        </div>
+
+    <div class="or">OR</div>
+
+
+    <div id="signup_options">
+        <h2 style="color: white;">Sign In Here!</h2>
+        <a href="/users/auth/google"><button class="signin_gmail" >Log in with Gmail</button></a>
+        <a href=""><button class="signin_facebook">Log in with Facebook</button></a>
+        <a href=""><button class="signin_twitter">Log in with Twitter</button></a>
+  </div>
+    </div>
+
+</div>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    </body>
+</html>

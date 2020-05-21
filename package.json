@@ -1,0 +1,60 @@
+{
+  "name": "fifth_strategy",
+  "version": "1.0.0",
+  "description": "Auto Trading Site",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon index.js ",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prod_start": "SET NODE_ENV=production && nodemon index.js"
+  },
+  "keywords": [
+    "Auto_Trading",
+    "Stock",
+    "Pricing"
+  ],
+  "author": "RAD",
+  "license": "ISC",
+  "dependencies": {
+    "@node-minify/clean-css": "^5.3.0",
+    "@node-minify/core": "^5.3.0",
+    "@types/node": "^13.11.0",
+    "body-parser": "^1.19.0",
+    "chart.js": "^2.9.3",
+    "child_process": "^1.0.2",
+    "connect-flash": "^0.1.1",
+    "connect-mongo": "^3.2.0",
+    "cookie-parser": "^1.4.5",
+    "crypto": "^1.0.1",
+    "csso": "^4.0.3",
+    "del": "^5.1.0",
+    "ejs": "^3.0.1",
+    "express": "^4.17.1",
+    "express-partials": "^0.3.0",
+    "express-session": "^1.17.0",
+    "file-system": "^2.2.2",
+    "fs": "0.0.1-security",
+    "gulp-imagemin": "^7.1.0",
+    "gulp-rev": "^9.0.0",
+    "gulp-uglify-es": "^2.0.0",
+    "jsonwebtoken": "^8.5.1",
+    "kue": "^0.11.6",
+    "mongoose": "^5.8.7",
+    "morgan": "^1.10.0",
+    "multer": "^1.4.2",
+    "nodemailer": "^6.4.6",
+    "passport": "^0.4.1",
+    "passport-google-oauth": "^2.0.0",
+    "passport-jwt": "^4.0.0",
+    "passport-local": "^1.0.0",
+    "rotating-file-stream": "^2.0.2",
+    "run-sequence": "^2.2.1"
+  },
+  "devDependencies": {
+    "gulp": "^4.0.2",
+    "gulp-cssnano": "^2.1.3",
+    "gulp-csso": "^4.0.1",
+    "gulp-minify": "^3.1.0",
+    "gulp-uglify": "^3.0.2"
+  }
+}

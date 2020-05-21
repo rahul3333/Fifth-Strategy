@@ -1,0 +1,1 @@
+function numofdays(){var e=document.getElementById("list_days");for(let n=0;n<1e3;n++){var t=document.createElement("option");t.text=n,e.add(t,e[n])}}

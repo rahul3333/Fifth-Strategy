@@ -1,0 +1,60 @@
+<html>
+    <head>
+        <title>
+            <%= title %>
+        </title>
+        <meta name="viewport" content="width=device-width, initial-scale=1" charset="utf-8">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+        <link rel="stylesheet" href="<%= assetPath('/css/home.css')%>">
+        <link rel="stylesheet" href="<%= assetPath('/css/invest.css')%>">
+        <link rel="stylesheet" href="<%= assetPath('/css/profile.css')%>">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/noty/3.1.4/noty.min.js"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/noty/3.1.4/noty.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    </head>
+
+    <body>
+
+        <%- include('_navbar2')%>
+        <input type="image" src="<%= user.avatar%>"  class="profile_image" id="profilepic">
+        <button onclick="update()" class="btn btn-primary">Change Profile Picture</button>
+        <div class="profilepic_div" id="profilepic_div_id">
+        <form action="/users/updateprofilepic/<%= user.id%>" id="form_profilepic" method="POST" enctype="multipart/form-data" style="display: none;">
+        <input type="file" name="avatar" placeholder="Profile Picture"> <br> <br> <br>
+        <button type="submit" class="btn btn-primary ">Update Profile Picture</button>
+        </form>
+        <button onclick="cancel()"class="btn btn-danger cancel_button2">Cancel</button>
+    </div>
+        <div class="profile_div">
+                <small id="profilename_small">Username</small><p id="profile_name"><%= user.name%></p><button type="button" class="btn btn-link" id="namebutton">Update Username</button><br>
+                <small id="profileemail_small">Email</small><p id="profile_email"><%= user.email%></p><button type="button" class="btn btn-link" id="emailbutton">Update Email</button><br>
+                <small id="profilephone_small">Phone Number</small><p id="profile_phone"><%= user.phone%></p><button type="button" class="btn btn-link" id="numberbutton">Update Number</button>  
+        </div>
+        <div class="nameform" id="formname">
+            <form action="/users/update/<%= user.id%>" method="POST">
+                <input type="text" placeholder="Enter New Username" name="name"> <br> <br><br>
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+            <button class="btn btn-danger cancel_button" onclick="cancel()">Cancel</button>
+        </div>
+        <div class="emailform" id="formemail">
+            <form action="/users/update/<%= user.id%>" method="POST">
+                <input type="text" placeholder="Enter New Email" name="email"> <br> <br><br>
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+            <button class="btn btn-danger cancel_button" onclick="cancel()">Cancel</button>
+        </div>
+        <div class="phoneform" id="formphone">
+            <form action="/users/update/<%= user.id%>" method="POST">
+                <input type="text" placeholder="Enter New Phone Number" name="phone"> <br> <br><br>
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+            <button class="btn btn-danger cancel_button" onclick="cancel()">Cancel</button>
+        </div>
+        </div>
+        <script src="<%= assetPath('/js/frames.js')%>"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    </body>
+</html>

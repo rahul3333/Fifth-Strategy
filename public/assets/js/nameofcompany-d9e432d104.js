@@ -1,0 +1,1 @@
+function nameofcompany(){var e=document.getElementById("organization"),n=["IBM","Amazon","SAP","Reliance","Deloitte"],o=n.length;for(let a=0;a<o;a++){var t=document.createElement("option");t.text=n[a],e.add(t,e[a]),console.log(e[a])}}

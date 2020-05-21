@@ -1,0 +1,31 @@
+<html>
+    <head>
+        
+        <meta name="viewport" content="width=device-width, initial-scale=1" charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>
+            <%= title %>
+        </title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+        <link rel="stylesheet" href="<%= assetPath('/css/home.css')%>">
+        <link rel="stylesheet" href="<%= assetPath('/css/profile.css')%>">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/noty/3.1.4/noty.min.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/noty/3.1.4/noty.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    </head>
+    <body onload="createChart()">
+        <% if(locals.user) {%>
+            <%- include('_navbar2') %>
+        <%}else {%>
+            <%- include('_navbar') %>
+        <%}%>
+        <div class="chart-container" style="position: relative; height:90vh; width:100vw">
+            <canvas id="chart"></canvas>
+        </div>
+
+        <script src="<%= assetPath('/js/graphjs.js')%>"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    </body>
+</html>
